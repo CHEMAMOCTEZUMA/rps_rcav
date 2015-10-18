@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RockPaperScissors</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<ul>
+  <li>
+    <a href="/rock">Play Rock</a>
+  </li>
+
+  <li>
+    <a href="/paper">Play Paper</a>
+  </li>
+
+  <li>
+    <a href="/scissors">Play Scissors</a>
+  </li>
+</ul>
+
+<h1>Game#rps</h1>
+<p>Find me in app/views/game/rps.html.erb</p>
+
+<p>You played Rocks!</p>
+
+<p>The computer played <%= @computer_move %>!</p>
+
+<p><%= @result %>!</p>
+
+<%= yield %>
+
+</body>
+</html>
