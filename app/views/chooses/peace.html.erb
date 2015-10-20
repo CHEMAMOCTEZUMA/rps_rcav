@@ -7,28 +7,53 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<ul>
-  <li>
-    <a href="/rock">Play Rock</a>
-  </li>
 
-  <li>
-    <a href="/paper">Play Paper</a>
-  </li>
+<div class="container">
+	
+	<hr>
 
-  <li>
-    <a href="/scissors">Play Scissors</a>
-  </li>
-</ul>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-xs-12"> 
+    		<div class="btn-group btn-group-justified">
+	    	<a href="/rock" type="button" class="btn btn-block btn-primary">Rock</a>
+	    	<a href="/paper" type="button" class="btn btn-block btn-primary">Paper</a>
+	    	<a href="/scissors" type="button" class="btn btn-block btn-primary">Scissors</a>
+	  		</div>
+        </div>
+    </div>
+    
+    <hr>    
 
-<h1>Game#rps</h1>
-<p>Find me in app/views/game/rps.html.erb</p>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2 col-xs-6">
+        	<div class="panel panel-default">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">You Played Scissors!</h3>
+  				</div>
+  				<div class="panel-body">
+    				<img class="img-responsive" src="../assets/images/scissors.png">
+  				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-xs-6">
+        	<div class="panel panel-default">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">Computer Played <%= @computer_move %>!</h3>
+  				</div>
+  				<div class="panel-body img-responsive">
+    				<img class="img-responsive" src="../assets/images/scissors.png">
+  				</div>
+			</div>		
+        </div>
+    </div>
 
-<p>You played Scissors!</p>
+    <hr>
 
-<p>The computer played <%= @computer_move %>!</p>
+    <div class="row">
+        <div class="col-md-12 col-md-offset-2">
+        <p><%= @result %>!</p></div>
 
-<p><%= @result %>!</p>
+</div>
 
 <%= yield %>
 

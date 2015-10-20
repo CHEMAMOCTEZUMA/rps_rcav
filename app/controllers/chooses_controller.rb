@@ -2,12 +2,13 @@ class ChoosesController < ApplicationController
   
   def fist
 
-	@computer_move =['rock','paper','scissors'].sample
+	@computer_move =['Rock','Paper','Scissors'].sample
 
-    if  @computer_move == "rock"
+    if  @computer_move == "Rock"
         @result = "It's a tie!"
+        @img_source = "../assets/images/rock.png"
     else 
-        if (@computer_move == 'scissors')
+        if (@computer_move == 'Scissors')
             @result = "You win!"
         else 
             @result = "HA!"
@@ -19,12 +20,12 @@ class ChoosesController < ApplicationController
 
   def hand
 
-  	@computer_move =['rock','paper','scissors'].sample
+  	@computer_move =['Rock','Paper','Scissors'].sample
 
-    if  @computer_move == "paper"
+    if  @computer_move == "Paper"
         @result = "It's a tie!"
     else 
-        if (@computer_move == 'rock')
+        if (@computer_move == 'Rock')
             @result = "You win!"
         else 
             @result = "HA!"
@@ -36,12 +37,12 @@ class ChoosesController < ApplicationController
 
   def peace
 
-  	@computer_move =['rock','paper','scissors'].sample
+  	@computer_move =['Rock','Paper','Scissors'].sample
 
-    if  @computer_move == "scissors"
+    if  @computer_move == "Scissors"
         @result = "It's a tie!"
     else 
-        if (@computer_move == 'paper')
+        if (@computer_move == 'Paper')
             @result = "You win!"
         else 
             @result = "HA!"
