@@ -6,12 +6,14 @@ class ChoosesController < ApplicationController
 
     if  @computer_move == "Rock"
         @result = "It's a tie!"
-        @img_source = "../assets/images/rock.png"
-    else 
+        @label = "label label-warning"
+    else 	
         if (@computer_move == 'Scissors')
             @result = "You win!"
+            @label = "label label-success"
         else 
             @result = "HA!"
+            @label = "label label-danger"
         end
     end
 
@@ -24,11 +26,14 @@ class ChoosesController < ApplicationController
 
     if  @computer_move == "Paper"
         @result = "It's a tie!"
+        @label = "label label-warning"
     else 
         if (@computer_move == 'Rock')
             @result = "You win!"
+            @label = "label label-success"
         else 
             @result = "HA!"
+            @label = "label label-danger"
         end
     end
 
@@ -41,11 +46,14 @@ class ChoosesController < ApplicationController
 
     if  @computer_move == "Scissors"
         @result = "It's a tie!"
+        @label = "label label-warning"
     else 
         if (@computer_move == 'Paper')
             @result = "You win!"
+            @label = "label label-success"
         else 
             @result = "HA!"
+            @label = "label label-danger"
         end
     end
 
